@@ -5,20 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Identification</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 </head>
 <body>
+
     <div class="container">
-        <h1>Image Identification Model</h1>
+        <h2>Upload an Image for Identification</h2>
+        
+        <label for="imageUpload" class="custom-file-upload">
+            Choose Image
+        </label>
         <input type="file" id="imageUpload" accept="image/*">
-        <div class="preview">
-            <img id="previewImage" src="" alt="Preview" style="display: none;">
+
+        <div id="previewContainer">
+            <img id="imagePreview" src="" alt="Image Preview" style="display: none;">
         </div>
-        <button id="predictBtn">Predict</button>
-        <div id="result"></div>
+
+        <button id="predictBtn" disabled>Get Predictions</button>
+
+        <div id="results"></div>
     </div>
-    <link rel="stylesheet" href="style.css">
-    
+
     <script src="app.js"></script>
 </body>
 </html>

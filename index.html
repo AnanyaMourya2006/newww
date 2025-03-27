@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Identification</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>🔍 AI-Powered Image Identification</h1>
+    </header>
 
-    <div class="container">
-        <h2>Upload an Image for Identification</h2>
-        
-        <label for="imageUpload" class="custom-file-upload">
-            Choose Image
-        </label>
-        <input type="file" id="imageUpload" accept="image/*">
+    <main>
+        <section class="upload-section">
+            <h2>📤 Upload an Image</h2>
+            <input type="file" id="imageInput" accept="image/*">
+            <button onclick="predictImage()">🔍 Identify</button>
+        </section>
 
-        <div id="previewContainer">
-            <img id="imagePreview" src="" alt="Image Preview" style="display: none;">
-        </div>
+        <section class="result-section">
+            <h2>📊 Prediction Result</h2>
+            <p id="predictionText">Upload an image to analyze.</p>
+        </section>
+    </main>
 
-        <button id="predictBtn" disabled>Get Predictions</button>
+    <footer>
+        <p>&copy; 2025 Image Identification App | Powered by AI</p>
+    </footer>
 
-        <div id="results"></div>
-    </div>
-
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
